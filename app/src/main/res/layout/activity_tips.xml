@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1B2A"
+    android:fitsSystemWindows="true">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@drawable/bg_chip"
+            android:tint="#A8CBEA"
+            android:padding="8dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="14dp"
+            android:contentDescription="Back"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Harvesting Tips"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Make every drop count"
+                android:textSize="12sp"
+                android:textColor="#7EAECF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp">
+
+            <!-- Tip 1 -->
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/bg_tip_card"
+                android:padding="16dp" android:layout_marginBottom="12dp" android:gravity="top">
+                <TextView android:text="🏠" android:textSize="22sp" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginEnd="12dp" android:paddingTop="2dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:text="Clean Your Roof Regularly"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView android:text="Debris, bird droppings, and algae reduce effective catchment. A clean roof improves runoff coefficient and keeps collected water cleaner."
+                        android:textSize="13sp" android:textColor="#A8CBEA" android:lineSpacingMultiplier="1.4"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Tip 2 -->
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/bg_tip_card"
+                android:padding="16dp" android:layout_marginBottom="12dp" android:gravity="top">
+                <TextView android:text="🔧" android:textSize="22sp" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginEnd="12dp" android:paddingTop="2dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:text="First Flush Diverter"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView android:text="Install a first-flush diverter to discard the initial 20–25 litres of rain, which carry the most contaminants. This dramatically improves water quality."
+                        android:textSize="13sp" android:textColor="#A8CBEA" android:lineSpacingMultiplier="1.4"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Tip 3 -->
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/bg_tip_card"
+                android:padding="16dp" android:layout_marginBottom="12dp" android:gravity="top">
+                <TextView android:text="🪣" android:textSize="22sp" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginEnd="12dp" android:paddingTop="2dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:text="Cover Your Tank"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView android:text="Always keep your storage tank sealed and covered. This prevents mosquito breeding, evaporation loss, and contamination from leaves or animals."
+                        android:textSize="13sp" android:textColor="#A8CBEA" android:lineSpacingMultiplier="1.4"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Tip 4 -->
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/bg_tip_card"
+                android:padding="16dp" android:layout_marginBottom="12dp" android:gravity="top">
+                <TextView android:text="📐" android:textSize="22sp" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginEnd="12dp" android:paddingTop="2dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:text="Maximise Catchment Area"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView android:text="Use the entire roof area for collection. Add gutters along all edges and connect them to a common downpipe. Even a 10% increase in catchment can yield hundreds of litres."
+                        android:textSize="13sp" android:textColor="#A8CBEA" android:lineSpacingMultiplier="1.4"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Tip 5 -->
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/bg_tip_card"
+                android:padding="16dp" android:layout_marginBottom="12dp" android:gravity="top">
+                <TextView android:text="🌱" android:textSize="22sp" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginEnd="12dp" android:paddingTop="2dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:text="Use for Gardening First"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView android:text="Unfiltered harvested water is ideal for garden irrigation. This conserves municipal water for drinking and directly reduces your household water bill."
+                        android:textSize="13sp" android:textColor="#A8CBEA" android:lineSpacingMultiplier="1.4"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Tip 6 -->
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/bg_tip_card"
+                android:padding="16dp" android:layout_marginBottom="12dp" android:gravity="top">
+                <TextView android:text="🔍" android:textSize="22sp" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginEnd="12dp" android:paddingTop="2dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:text="Inspect Gutters Before Monsoon"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView android:text="Blocked or cracked gutters spill water before it reaches the tank. Inspect and clear gutters every April before the Indian monsoon season starts."
+                        android:textSize="13sp" android:textColor="#A8CBEA" android:lineSpacingMultiplier="1.4"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Tip 7 -->
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/bg_tip_card"
+                android:padding="16dp" android:layout_marginBottom="12dp" android:gravity="top">
+                <TextView android:text="💧" android:textSize="22sp" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginEnd="12dp" android:paddingTop="2dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:text="Track Every Rainfall Event"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView android:text="Log each rainfall session in Jal-Sanchay immediately after it rains. Accurate data helps you plan usage, spot seasonal patterns, and improve your conservation strategy over time."
+                        android:textSize="13sp" android:textColor="#A8CBEA" android:lineSpacingMultiplier="1.4"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

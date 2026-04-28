@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1B2A"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="40dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:src="@drawable/logo"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="Jal-Sanchay logo"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="Jal-Sanchay"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Rainwater Tracker"
+                    android:textSize="12sp"
+                    android:textColor="#7EAECF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Nav Buttons — backgroundTint="@null" prevents Material overriding the bg -->
+            <!-- REPLACE the Tips Button with this -->
+            <TextView
+                android:id="@+id/btnTips"
+                android:text="💡 Tips"
+                android:textColor="#A8CBEA"
+                android:textSize="12sp"
+                android:background="@drawable/bg_chip"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_height="36dp"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"/>
+
+            <!-- REPLACE the Report Button with this -->
+            <TextView
+                android:id="@+id/btnMonthly"
+                android:text="📊 Report"
+                android:textColor="#A8CBEA"
+                android:textSize="12sp"
+                android:background="@drawable/bg_chip"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_height="36dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Dashboard: Today + Total row -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_stat_card"
+                android:padding="16dp"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:text="TODAY SAVED"
+                    android:textSize="10sp"
+                    android:textColor="#7EAECF"
+                    android:letterSpacing="0.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvTodaySaved"
+                    android:text="0 L"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_stat_card"
+                android:padding="16dp"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:text="ALL-TIME SAVED"
+                    android:textSize="10sp"
+                    android:textColor="#7EAECF"
+                    android:letterSpacing="0.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvTotalSaved"
+                    android:text="0 L"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Water Tank Card -->
+        <FrameLayout
+            android:id="@+id/cardTank"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_tank_card"
+            android:clipToOutline="true">
+
+            <View
+                android:id="@+id/viewWaveFill"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:background="#3A7BD5"
+                android:alpha="0.85"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvTankPercent"
+                    android:text="0%"
+                    android:textSize="44sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="TANK FILL"
+                    android:textSize="11sp"
+                    android:textColor="#A8CBEA"
+                    android:letterSpacing="0.15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Water + Impact Cards -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_stat_card"
+                android:padding="16dp"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:src="@drawable/logo"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Jal-Sanchay logo"/>
+
+                <TextView
+                    android:id="@+id/tvWaterCollected"
+                    android:text="0 L"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Collected Now"
+                    android:textSize="11sp"
+                    android:textColor="#7EAECF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_stat_card"
+                android:padding="16dp"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:text="🏠"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvDaysSupported"
+                    android:text="0 days"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Impact Score"
+                    android:textSize="11sp"
+                    android:textColor="#7EAECF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Input Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input_card"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:text="Enter Details"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="ROOF AREA (SQ FT)"
+                android:textSize="10sp"
+                android:textColor="#7EAECF"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etArea"
+                android:hint="e.g. 1000"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_input_field"
+                android:padding="14dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="RAINFALL (MM)"
+                android:textSize="10sp"
+                android:textColor="#7EAECF"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etRainfall"
+                android:hint="e.g. 10"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_input_field"
+                android:padding="14dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="TANK CAPACITY (LITRES)"
+                android:textSize="10sp"
+                android:textColor="#7EAECF"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etTank"
+                android:hint="e.g. 5000"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_input_field"
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Calculate Button — backgroundTint null is critical -->
+        <TextView
+            android:id="@+id/btnCalculate"
+            android:text="Calculate Water Wealth"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:background="@drawable/bg_button_primary"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Drop Grid -->
+        <LinearLayout
+            android:id="@+id/llDropGrid"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input_card"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:text="Water Coverage"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDropSubtitle"
+                android:text="Each drop = 100 L"
+                android:textSize="12sp"
+                android:textColor="#7EAECF"
+                android:layout_marginBottom="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/llDrops"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Hidden legacy views -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/progressTank"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progress="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>

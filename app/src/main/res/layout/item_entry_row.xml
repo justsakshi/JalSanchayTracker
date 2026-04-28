@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_input_card"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="8dp">
+
+    <!-- Blue dot accent -->
+    <View
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/bg_dot"
+        android:layout_marginEnd="12dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvEntryDate"
+            android:text="01 Jan 2025, 10:30 AM"
+            android:textSize="12sp"
+            android:textColor="#7EAECF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvEntryWater"
+            android:text="0 L"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvEntryDetails"
+            android:text="Roof: 1000 sq ft  ·  Rain: 10 mm"
+            android:textSize="11sp"
+            android:textColor="#4A7090"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Delete button -->
+    <ImageButton
+        android:id="@+id/btnDeleteEntry"
+        android:src="@android:drawable/ic_menu_delete"
+        android:tint="#3D5A78"
+        android:background="@null"
+        android:padding="8dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:contentDescription="Delete entry"/>
+
+</LinearLayout>
